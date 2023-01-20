@@ -1,0 +1,41 @@
+include ../mixin/mixin.pug
+block main-vars
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    //- Fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    //- Icon font
+    script(src='https://kit.fontawesome.com/9ca2acc967.js' crossorigin='anonymous')
+    //- Useful meta tags
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    //- <meta name="viewport" content="width=1280"> ширина видимого контента, уменьшается сайт без адаптации
+    meta(name='robots' content='index, follow')
+    //- чтоб не бесил выплывающий перевод страницы
+    meta(name='google' value='notranslate')
+    //- Swiper CDN
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    //- meta
+    meta(name='description' content=description)
+    meta(name='keywords' content=keywords)
+    title #{title}
+    block head
+  body(class=bodyClass)
+    //- .preloader
+    
+    .btn-to-top
+      svg
+        use(xlink:href='images/icon/sprite.svg#arrow-left')
+    .page(class=pageClass)
+      include ../includes/modules/header
+      main.main
+        block content
+      include ../includes/modules/footer
+
+
+    block script

@@ -1,0 +1,31 @@
+@import "~normalize.css";
+@import "vars";
+@import "mixin";
+@import "settings";
+@import "animation";
+@import "fonts";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+// Ctrl + Alt + X классы SCSS
+// Ctrl + Alt + C классы CSS
+
+//прописываем background-image: url("./images/picture.jpg");
+
+
+/* General*/
+@import "components/general/header";
+@import "components/general/footer";
+@import "components/general/UIkits";
+@import "components/general/btn-to-top";
+@import "components/general/preloader";
+@import "components/general/navigation";
+
+
+
+
+
+
+
+
+

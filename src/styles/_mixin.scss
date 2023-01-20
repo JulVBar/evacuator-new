@@ -1,0 +1,50 @@
+$maxWidth: 80; //80rem 1280px
+$minWidth: 23; //23rem 375px 
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - $minWidth;
+	font-size: calc(#{$mobSize + rem} + #{$addSize} * ((100vw - 23rem) / #{$maxWidth}));
+}
+
+// @include adaptiv-font(5.5, 1.5); max-text-size on pc | min size on mobile
+
+@mixin bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin breakpoint($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-min($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-height($bp) {
+    @media (max-height: $bp) {
+        @content;
+    }
+}
+
+

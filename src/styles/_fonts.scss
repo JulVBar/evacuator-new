@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Anthanista";
+    src: url('./fonts/Anthanista.otf');
+}
+
+//in class
+.class {
+    font-family: Anthanista;
+    font-weight: 400;
+}
+
+$font-Anthanista: Anthanista;

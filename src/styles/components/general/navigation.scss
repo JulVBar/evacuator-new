@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  &__link {
+    color: blue;
+    // padding: 10px 15px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: black;
+    }
+    &.active {
+      color: rgb(128, 26, 84);
+    }
+  }
+}

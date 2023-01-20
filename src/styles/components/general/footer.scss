@@ -1,0 +1,11 @@
+.footer {
+  nav ul {
+    flex-direction: column;
+    li {
+      &:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

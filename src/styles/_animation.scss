@@ -1,0 +1,204 @@
+// animation-play-state: running;
+// animation-play-state: paused;
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin animation-fade-in ($duration, $delay) {
+    opacity: 0;
+    animation: fadeIn $duration ease-in-out forwards;
+    animation-delay: $delay;
+}
+
+
+@keyframes slide-in-from-left {
+    from {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-slide-in-from-left ($duration, $delay) {
+    transform: translateX(-120%);
+    opacity: 0;
+    animation: slide-in-from-left $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-slide-down ($duration, $delay) {
+    transform: translateY(-120%);
+    opacity: 0;
+    animation: slide-down $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes roll-in-left {
+    from {
+        transform: rotate(0deg);
+        left: -600px;
+        opacity: 0;
+    }
+    to {
+        transform: rotate(360deg);
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@mixin animation-roll-in-left ($duration, $delay) {
+    left: -600px;
+    opacity: 0;
+    animation: roll-in-left $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes scale-out {
+    from {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@mixin animation-scale-out ($delay) {
+    opacity: 0;
+    animation: scale-out 0.5s ease-out forwards;
+    animation-delay: $delay;
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@mixin animation-scale-in ($duration, $delay) {
+    opacity: 0;
+    animation: scale-in $duration ease-out forwards;
+    animation-delay: $delay;
+}
+
+@keyframes blur-out {
+    from {
+        filter: blur(4px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-blur-out ($duration, $delay) {
+    filter: blur(4px);
+    opacity: 0;
+    animation: blur-out $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes border-run {
+    0% {
+        top: -50%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        opacity: 0;
+    }
+}
+
+@mixin animation-border-run ($duration) {
+    top: -50%;
+    opacity: 0;
+    animation: border-run $duration linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin animation-rotate ($duration) {
+    transform: rotate(0deg);
+    animation: rotate $duration linear infinite;
+}
+
+@keyframes levitate {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(5%);
+    }
+}
+
+@mixin animation-levitate ($duration) {
+    transform: translateY(0);
+    animation: levitate $duration ease infinite;
+}
+
+// Moving along svg path (line, triangle, circle)
+.anchor {
+    offset-anchor: center center;
+    offset-path: path("M20 0 h 105 v 65 h -125 v -65 h 20");
+    offset-rotate: auto 90deg;
+    offset-anchor: 50% 50%;
+    animation: move-along 5000ms 0ms infinite linear;
+}
+
+@keyframes move-along {
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+// Drawing svg lines (need to be STROKE)
+.svg {
+    .path {
+        stroke-dasharray: 1100; // choose in browser to hide the hole svg path
+        stroke-dashoffset: 1100;
+        animation: draw-svg-line 1s linear forwards;
+    }
+}
+
+@keyframes draw-svg-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

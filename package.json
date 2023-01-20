@@ -1,0 +1,52 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000n\u0000a\u0000i\u0000l\u0000s\u0000t\u0000u\u0000d\u0000i\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulVBar/nailstudio.git"
+  },
+  "author": "Barankova Iuliia <barankovauv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulVBar/nailstudio/issues"
+  },
+  "homepage": "https://github.com/JulVBar/nailstudio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "css-mqpacker-webpack-plugin": "^0.12.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "image-webpack-loader": "^8.0.1",
+    "mini-css-extract-plugin": "^2.4.1",
+    "sass-loader": "^12.1.0",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "normalize.css": "^8.0.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.54.2"
+  }
+}

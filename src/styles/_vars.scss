@@ -1,0 +1,34 @@
+$white:rgb(255, 255, 255);
+$black:rgb(0, 0, 0);
+
+//colors
+$red: #d997f6;
+$gray:#3ca6fe;
+$dark-gray:#3ca6fe;
+
+
+//font size
+$font-size-S: 16px;
+$font-size-M: 18px;
+$font-size-L: 24px;
+$font-size-XL: 35px;
+
+
+$font-family: 'Manrope', sans-serif;
+
+//z-index
+$z-index-header:  1000;
+$header-height: 100px;
+
+//media
+$desktop: 1280px; 
+$tablet: 1024px; 
+$mini-tablet: 768px; 
+$mobile: 480px; 
+$mini-mobile: 360px; 
+
+$main-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
