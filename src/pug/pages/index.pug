@@ -8,12 +8,244 @@ block main-vars
   - var pageClass = 'page__home';
 
 block content
-  section
-    .container
-      h1.title Title
-      img.img(src='images/test.png' alt='')
-      img.img(src='images/slider/slider.jpg' alt='')
-  example-component
-
-
-
+  section#hero.hero
+    .hero__body
+      .hero__column
+        img(class="image-cover" src="images/hero_evacuator1.png", alt="дешевый эвакуатор в спб и ло" data-animation)
+      .hero__column
+        .hero__title
+          h1 <span><span data-animation>ЭВАКУАТОР</span></span> <span><span data-animation>В СПБ И ЛО</span></span>
+        ul.hero__tags.list-reset(data-animation)
+          li.hero__tags-item ДЕШЕВО
+          li.hero__tags-item БЫСТРО
+          li.hero__tags-item 24 ЧАСА
+        p.hero__text(data-animation) У нас можно заказать эвакуатор недорого в Санкт-Петербурге и Ленинградской области. Мы работаем круглосуточно.
+        a(href="tel:+78129756060" data-animation).red-button.hero__button ВЫЗВАТЬ ЭВАКУАТОР
+    .hero__footer(data-animation)
+      ul.hero__benefits.list-reset
+        li.hero__benefits-item
+          .hero__benefits-icon
+            img(src="images/icon/free.svg", alt="бесплатная подача эвакуатора")
+          h2.hero__benefits-title БЕСПЛАТНАЯ ПОДАЧА
+        li.hero__benefits-item
+          .hero__benefits-icon
+            img(src="images/icon/ruble.svg", alt="эвакуатор недорого")
+          h2.hero__benefits-title НЕДОРОГО
+      ul.hero__benefits.list-reset
+        li.hero__benefits-item
+          .hero__benefits-icon
+            img(src="images/icon/24hour.svg", alt="эвакуатор круглосуточно")
+          h2.hero__benefits-title КРУГЛОСУТОЧНО
+        li.hero__benefits-item
+          .hero__benefits-icon
+            img(src="images/icon/fast.svg", alt="эвакуатор быстро")
+          h2.hero__benefits-title БЫСТРО ОТ 15 МИНУТ
+  section#prices.prices
+    .prices__container
+      h3.title.prices__title наши <span>цены на услуги</span> эвакуатора не кусают!
+      .prices__content
+        ul.pricelist.list-reset
+          li.pricelist__item
+            p Эвакуатор для мотоцикла, снегохода, скутера
+            p от 1 500 р.
+          li.pricelist__item
+            p Эвакуатор для легкового авто
+            p от 2 000 р.
+          li.pricelist__item
+            p Эвакуатор для кроссовера
+            p от 2 500 р.
+          li.pricelist__item
+            p Эвакуатор для внедорожника
+            p от 2 500 р.
+          li.pricelist__item
+            p Эвакуатор для винивэна, микроавтобуса
+            p от 3 000 р.
+          li.pricelist__item
+            p Эвакуатор для спец техники
+            p от 3 000 р.
+          li.pricelist__item
+            p Эвакуатор для грузового авто
+            p от 3 500 р.
+          li.pricelist__item
+            p Сложная погрузка
+            p от 500 р.
+          li.pricelist__item
+            p Погрузка авто с заблокированным рулём
+            p 500 р.
+          li.pricelist__item
+            p Заблокированное колесо (1 шт)
+            p 500 р.
+          li.pricelist__item
+            p Отсутсвие крюка
+            p Бесплатно
+          li.pricelist__item
+            p Подача эвакуатора
+            p Бесплатно
+        a(href="tel:+78129756060" data-animation).red-button.hero__button ВЫЗВАТЬ ЭВАКУАТОР
+  section#howto.howto
+    h3.title.howto__title как <span>заказать эвакуатор</span> в спб недорого
+    .howto__steps
+      .howto__step
+        .howto__header
+          .howto__icon
+            img.image-contain(src="images/icon/one.svg", alt="подать заявку на вызов эвакуатора")
+          h4.howto__caption Подать заявку
+        p.howto__text Быстро заказать эвакуатор в любой район СПБ и ЛО :
+        ul.howto__list
+          li.howto__list-item позвонить по телефону эвакуатора 
+            a(href="tel:+78129756060") 975-60-60
+          li.howto__list-item написать в 
+            a(href="https://api.whatsapp.com/send?phone=+79019756060" target="blank") Whatsapp 
+            | или 
+            a(href="tel:+78129756060" target="blank") Telegram
+      .howto__picture
+          img.image-cover(src="images/evacuator1.png", alt="заказать эвакуатор в спб недорого")
+      .howto__step
+        .howto__header
+          .howto__icon
+            img.image-contain(src="images/icon/two.svg", alt="подать заявку на вызов эвакуатора")
+          h4.howto__caption УТОЧНИТЬ ДЕТАЛИ
+        p.howto__text Предоставить диспетчеру информацию:
+        ul.howto__list
+          li.howto__list-item контактные данные, марка и модель авто
+          li.howto__list-item причина вызова
+          li.howto__list-item адрес вызова и время подачи
+      .howto__step
+        .howto__header
+          .howto__icon
+            img.image-contain(src="images/icon/three.svg", alt="подать заявку на вызов эвакуатора")
+          h4.howto__caption ПОДГОТОВИТЬ ДОКУМЕНТЫ
+        p.howto__text Для эвакуации Вашего авто необходимы документы:
+        ul.howto__list
+          li.howto__list-item удостоверение личности
+          li.howto__list-item свидетельство о регистрации ТС
+          li.howto__list-item КАСКО или ОСАГО
+  section#statistic.statistic
+    h3.title.statistic__title ПОЧЕМУ ВЫБИРАЮТ НАШ <span>ЭВАКУАТОР В спб И ло</span>
+    ul.counter.list-reset
+      li.counter__item
+        .counter__header
+          .counter__number(data-count="15") 15
+          span +
+        p.counter__text лет опыта
+      li.counter__item
+        .counter__header
+          .counter__number(data-count="97") 97
+          span %
+        p.counter__text ДОВОЛЬНЫХ КЛИЕНТОВ
+      li.counter__item
+        .counter__header
+          .counter__number(data-count="20") 20
+        p.counter__text МИНУТ СРЕДНЕЕ ОЖИДАНИЕ
+  section#reviews.reviews
+    h3.title.reviews__title <span>отзывы</span> наших клиентов
+    .swiper.reviews__swiper
+      .swiper-wrapper.reviews__swiper-wrapper
+        .swiper-slide.reviews__slide
+          .reviews__slide-header
+            .reviews__slide-left
+              .reviews__slide-name Андрей К.
+              .reviews__slide-stars
+                img(src="images/icon/stars_5.svg", alt="")
+            .reviews__slide-right
+              .reviews__slide-date 19.02.2023
+              .reviews__slide-link отзыв из Яндекс.Карт
+          .reviews__slide-text Хочу оставить благодарность водителю Игорю Романовичу. Очень вежливый и дружелюбный профессионал. Застрял за городом. Игорь угостил теплым чаем. Погрузили очень аккуратно. Отношение очень домашнее и позитивное.
+        .swiper-slide.reviews__slide
+          .reviews__slide-header
+            .reviews__slide-left
+              .reviews__slide-name Кирилл
+              .reviews__slide-stars
+                img(src="images/icon/stars_5.svg", alt="")
+            .reviews__slide-right
+              .reviews__slide-date 08.01.2023
+              .reviews__slide-link отзыв из Яндекс.Карт
+          .reviews__slide-text На звонок ответили быстро, все четко рассказали. Заказывал заранее. Водитель отзвонился за час. Оперативно погрузили, доехали быстро, объезжая пробки. Цена очень демократичная.
+        .swiper-slide.reviews__slide
+          .reviews__slide-header
+            .reviews__slide-left
+              .reviews__slide-name Ольга
+              .reviews__slide-stars
+                img(src="images/icon/stars_4,5.svg", alt="")
+            .reviews__slide-right
+              .reviews__slide-date 7.11.2022
+              .reviews__slide-link отзыв из Яндекс.Карт
+          .reviews__slide-text Первый раз сломалась машина. Не знала, что делать. Очень боялась, что воспользуются моей неопытностью и сдерут много денег. В службе отнеслись с пониманием. Все рассказали, показали, объяснили. Очень благодарна.
+        .swiper-slide.reviews__slide
+          .reviews__slide-header
+            .reviews__slide-left
+              .reviews__slide-name Волкова Анна
+              .reviews__slide-stars
+                img(src="images/icon/stars_5.svg", alt="")
+            .reviews__slide-right
+              .reviews__slide-date 05.10.2022
+              .reviews__slide-link отзыв из Яндекс.Карт
+          .reviews__slide-text Все отлично. Посоветовали отличный сервис. Водитель Игорь отвечал на все вопросы приветливо и без раздражения.
+    .reviews__footer
+      .reviews__swiper-nav
+        .reviews__swiper-next.reviews__swiper-btn
+          svg(width='70' height='30' viewBox='0 0 70 30' xmlns='http://www.w3.org/2000/svg')
+            path(d='M10.4303 14.1108C9.85656 14.5784 9.85656 15.4127 10.4303 15.8802L22.6252 24.2582C23.0877 24.5511 23.7502 24.2582 23.7502 23.7661V18.5166H58.75C59.4375 18.5166 60 17.9893 60 17.3449V12.6579C60 12.0134 59.4375 11.4861 58.75 11.4861H23.7502V6.23667C23.7502 5.73282 23.0627 5.43988 22.6002 5.75625L10.4303 14.1108Z')
+        .reviews__swiper-prev.reviews__swiper-btn
+          svg(width='70' height='30' viewBox='0 0 70 30' xmlns='http://www.w3.org/2000/svg')
+            path(d='M59.5697 14.1108C60.1434 14.5784 60.1434 15.4127 59.5697 15.8802L47.3748 24.2582C46.9123 24.5511 46.2498 24.2582 46.2498 23.7661V18.5166H11.25C10.5625 18.5166 10 17.9893 10 17.3449V12.6579C10 12.0134 10.5625 11.4861 11.25 11.4861H46.2498V6.23667C46.2498 5.73282 46.9373 5.43988 47.3998 5.75625L59.5697 14.1108Z')
+      a(href="#").red-button.reviews__button ОСТАВИТЬ ОТЗЫВ
+      //- <div class="badge1" style="width:100%;height:1200px;overflow:hidden;position:relative;">
+      //-   <iframe style="display: flex; width:100%;height:100%;background: black;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/226327670406?comments"></iframe>
+      //- </div>
+      //- <script src="https://res.smartwidgets.ru/app.js" defer></script>
+      //- <div class="sw-app" data-app="87aef9678f19a093d3537b8640a3f2b0"></div>
+  section#roadhelp.roadhelp
+    .roadhelp__container
+      h3.title.roadhelp__title нужна <span>помощь на дороге?</span>
+      p.roadhelp__text ЗВОНИ! МЫ ВСЕГДА РАДЫ ПОМОЧЬ!
+    .roadhelp__container.roadhelp__container--right
+      img(src="images/icon/arrow_big.svg", alt="телефон эвакуатора")
+      +phone("40px")
+  section#calculating.calculating
+    h3.title.calculating__title рассчитать <span>стоимость ЭВАКУАТОРА</span>
+    .calculating__inner
+      .calculating__subtitle <span>1</span> Выберите тип автомобиля
+      .calculating__cars  
+        ul.calculating__choose.list-reset
+          li#moto.calculating__choose-item(data-tarif='1' data-fix='2000' data-price='50') Мотоцикл 
+          li#light-car.calculating__choose-item.calculating__choose-item_active(data-tarif='2' data-fix='2000' data-price='50') Легковая
+        ul.calculating__choose.list-reset  
+          li#cross.calculating__choose-item(data-tarif='3' data-fix='2500' data-price='60') Кроссовер
+          li#jip.calculating__choose-item(data-tarif='4' data-fix='2500' data-price='60') Внедорожник
+        ul.calculating__choose.list-reset
+          li#minivan.calculating__choose-item(data-tarif='5' data-fix='2500' data-price='60') Минивэн
+          li#special.calculating__choose-item(data-tarif='6' data-fix='2500' data-price='60' ) Спецтехника
+        ul.calculating__choose.list-reset  
+          li#van.calculating__choose-item(data-tarif='7' data-fix='2500' data-price='60') Минибус
+          li#truck.calculating__choose-item(data-tarif='8' data-fix='3000' data-price='70') Грузовая
+      .calculating__subtitle Выберите дополнительные опции
+      ul.calculating__insert.list-reset
+        li.calculating__box
+          .calculating__box-subtitle Расстояние (км)*
+          input#kilo.calculating__input-kilo(type='text' placeholder='Введите расстояние')
+        li.calculating__box.calculating__steering
+          input#ditch.calculating__checkbox(type='checkbox')
+          label.calculating__label(for='ditch') Сложность погрузки
+          input#steer.calculating__checkbox(type='checkbox')
+          label.calculating__label(for='steer') Блокировка руля
+          input#preoder.calculating__checkbox(type='checkbox')
+          label.calculating__label(for='preoder') Предварительный заказ
+        li.calculating__box
+          .calculating__box-subtitle Заблокированных колёс
+          .calculating__counter
+            #minus.calculating__counter-item.calculating__sign -
+            #wheelnumber.calculating__counter-item 0
+            #plus.calculating__counter-item.calculating__sign +
+      .calculating__subtitle Выберите время суток
+      #daynight.calculating__choose
+        #night.calculating__choose-item Ночь 
+        #day.calculating__choose-item.calculating__choose-item_active День
+      .calculating__total
+        .calculating__result-text.small-title
+          | Расчетная стоимость:
+        .calculating__result
+          span 200
+          |  руб.
+      .calculating__note
+        | *Cтоимость является ориентировочной и может меняться в зависимости от фактических условий и сложности работ. Уточняйте стоимость у диспетчера по номеру +7 (812) 975-60-60

@@ -1,0 +1,54 @@
+.statistic {
+  &__title {
+    width: 50%;
+  }
+}
+
+.counter {
+  border-bottom: $line-h solid $gray;
+  border-top: $line-h solid $gray;
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    position: relative;
+    width: 320px;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 50%;
+      margin: 0 -1px;
+      width: $line-h;
+      height: 30px;
+      background: $gray;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      margin: 0 -1px;
+      width: $line-h;
+      height: 30px;
+      background: $gray;
+    }
+  }
+  &__header {
+    display: flex;
+    color: $red;
+    font-size: 100px;
+    line-height: 100%;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__text {
+    font-size: $font-size-M;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+  }
+}

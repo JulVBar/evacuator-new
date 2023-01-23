@@ -1,6 +1,16 @@
 // animation-play-state: running;
 // animation-play-state: paused;
 
+@keyframes draw-line-hor {
+    to {
+        width: 100%;
+    }
+}
+
+@mixin animation-draw-line-hor ($duration) {
+    animation: draw-line-hor $duration linear forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -19,7 +29,7 @@
 
 @keyframes slide-in-from-left {
     from {
-        transform: translateX(-120%);
+        transform: translateX(-5%);
         opacity: 0;
     }
     to {
@@ -29,7 +39,7 @@
 }
 
 @mixin animation-slide-in-from-left ($duration, $delay) {
-    transform: translateX(-120%);
+    transform: translateX(-5%);
     opacity: 0;
     animation: slide-in-from-left $duration linear forwards;
     animation-delay: $delay;
@@ -50,6 +60,24 @@
     transform: translateY(-120%);
     opacity: 0;
     animation: slide-down $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-slide-up ($duration, $delay) {
+    transform: translateY(20%);
+    opacity: 0;
+    animation: slide-up $duration ease-in-out forwards;
     animation-delay: $delay;
 }
 
@@ -86,6 +114,7 @@
 
 @mixin animation-scale-out ($delay) {
     opacity: 0;
+    transform: scale(1.5);
     animation: scale-out 0.5s ease-out forwards;
     animation-delay: $delay;
 }

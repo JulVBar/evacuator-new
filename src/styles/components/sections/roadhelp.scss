@@ -1,0 +1,24 @@
+.roadhelp {
+  display: flex;
+  &__container {
+    width: 50%;
+    padding-right: 30px;
+    &--right {
+      padding-left: 30px;
+      padding-right: 0px;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__title {
+    text-align: left;
+  }
+  &__text {
+    text-align: right;
+    font-size: $font-size-L;
+    font-weight: 700;
+  }
+}

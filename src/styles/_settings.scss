@@ -8,8 +8,9 @@ body {
     background-color: $black;
     font-family: $font-family;
     line-height: 140%;
+    letter-spacing: 1px;
     font-weight: 400;
-    color: $gray;
+    color: $gray-light;
     font-size: $font-size-M;
     @include breakpoint($mobile) {
         font-size: $font-size-S;
@@ -24,7 +25,12 @@ body {
 
 h1, h2, h3, h4, h5, p {
     margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
     color: $white;
+    letter-spacing: 1.5px;
+    line-height: 140%;
 }
 
 a {
@@ -40,6 +46,13 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.image-contain {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .list-reset {
@@ -58,7 +71,6 @@ img {
 
 main {
     flex: 1 1 auto;
-    background: rgb(245, 245, 150);
     overflow: hidden;
     //if header fixed
     // padding-top: $header-height;
@@ -66,18 +78,20 @@ main {
 
 header {
     flex: 0 0 $header-height;
-    background: rgb(125, 209, 125);
 }
 
 footer {
     flex: 0 0 150px;
-    background: rgb(132, 132, 224);
+}
+
+section {
+    margin-bottom: 150px;
 }
 
 .container {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 1260px;
+    max-width: 1240px;
 }
 
 // Preloader

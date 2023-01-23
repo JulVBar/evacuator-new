@@ -1,0 +1,47 @@
+.reviews {
+  &__title {
+    width: 50%;
+  }
+  &__swiper {
+    margin-bottom: 50px;
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 170px;
+    }
+    &-btn {
+      svg {
+        width: 70px;
+        height: 30px;
+        fill: $gray;
+      }
+    }
+  }
+
+  &__slide {
+    width: 500px;
+    height: 230px;
+    border: $line-h solid $gray;
+    padding: 30px;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    &-name {
+      margin-bottom: 10px;
+    }
+    &-date {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    &-text {
+      
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,10 +1,10 @@
 $white:rgb(255, 255, 255);
-$black:rgb(0, 0, 0);
+$black: #1A1A18;
 
 //colors
-$red: #d997f6;
-$gray:#3ca6fe;
-$dark-gray:#3ca6fe;
+$red: #E62B32;
+$gray-light:#EEEDED;
+$gray:#404040;
 
 
 //font size
@@ -18,7 +18,9 @@ $font-family: 'Manrope', sans-serif;
 
 //z-index
 $z-index-header:  1000;
-$header-height: 100px;
+$header-height: 75px;
+
+$line-h: 2px;
 
 //media
 $desktop: 1280px; 

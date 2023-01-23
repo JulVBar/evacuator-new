@@ -1,19 +1,32 @@
 .nav {
   display: flex;
   &__item {
+    position: relative;
     &:not(:last-child) {
       margin-right: 50px;
     }
+    &:hover {
+      .nav__link:after {
+        width: 100%;
+      }
+    }
   }
   &__link {
-    color: blue;
-    // padding: 10px 15px;
-    transition: all .2s ease-in-out;
-    &:hover {
-      color: black;
+    position: relative;
+    color: $gray-light;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: $line-h;
+      background-color: $red;
+      transition: all .2s ease-in-out;
     }
+    
     &.active {
-      color: rgb(128, 26, 84);
+      // color: $red;
     }
   }
 }

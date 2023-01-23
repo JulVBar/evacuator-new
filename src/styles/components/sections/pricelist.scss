@@ -1,0 +1,35 @@
+.prices {
+  &.start-animation {
+    @include animation-fade-in(1s, 2s);
+  }
+  &__container {
+    display: flex;
+  }
+  &__title {
+    width: 50%;
+  }
+  &__content {
+    width: 50%;
+  }
+}
+
+.pricelist {
+  margin-bottom: 50px;
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    &-border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+      height: $line-h;
+      background: $gray;
+      &.scroll-animation {
+        @include animation-draw-line-hor(0.5s);
+      }
+    }
+  }
+}

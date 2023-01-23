@@ -1,0 +1,66 @@
+.phone-number {
+  color: $white;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+  span {
+    color: $red;
+  }
+  &:hover {
+    color: $red;
+  }
+}
+
+.red-button {
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px;
+  background: $red;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $font-size-M;
+  border: 0;
+  letter-spacing: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top:50%;
+    opacity: 0;
+    transform: scale(1);
+    width: 140px;
+    height: 140px;
+    margin: -70px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  &:hover::after {
+    animation: ripple .5s ease-in-out forwards;
+  }
+}
+@keyframes ripple {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.title {
+  font-size: $font-size-XL;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  span {
+    color: $red;
+    font-weight: 700;
+  }
+}
