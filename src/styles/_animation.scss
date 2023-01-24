@@ -198,8 +198,22 @@
 }
 
 @mixin animation-levitate ($duration) {
+    transform: translateX(0);
+    animation: levitate $duration ease infinite alternate;
+}
+
+@keyframes levitate-horisontal {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(10%);
+    }
+}
+
+@mixin animation-levitate-horisontal ($duration) {
     transform: translateY(0);
-    animation: levitate $duration ease infinite;
+    animation: levitate-horisontal $duration ease-in-out infinite alternate;
 }
 
 // Moving along svg path (line, triangle, circle)

@@ -10,6 +10,7 @@
       align-items: center;
       img {
         margin-right: 30px;
+        @include animation-levitate-horisontal(1s);
       }
     }
   }

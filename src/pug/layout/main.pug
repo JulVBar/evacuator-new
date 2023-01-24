@@ -20,6 +20,8 @@ html(lang='ru')
     //- Swiper CDN
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
     script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    //- AOS
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     //- meta
     meta(name='description' content=description)
     meta(name='keywords' content=keywords)
@@ -42,5 +44,6 @@ html(lang='ru')
           block content
         include ../includes/modules/footer
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
     block script

@@ -17,6 +17,7 @@
     &__cars {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 30px;
     }
 
     &__choose {
@@ -27,13 +28,11 @@
         display: flex;
         align-items: center;
         justify-content: right;
-
         width: 250px;
         height: 100px;
         margin-right: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         padding-right: 20px;
-        // padding-left: 80px;
         border: $line-h solid $gray;
         background: $black;
         background-position: left;
@@ -44,7 +43,6 @@
         color: $gray-light;
         cursor: pointer;
         transition: .3s all;
-
         &:hover {
             background-position-x: -30px;
         }
@@ -53,61 +51,68 @@
     &__choose-item_active {
         color: $white;
         background-color: $red;
-        background-position-x: -20px;
+        background-position-x: -30px;
     }
-
 
     &__insert {
         display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        border-bottom: $line-h solid $gray;
+        border-top: $line-h solid $gray;
+        margin-bottom: 50px;
+    }
+    &__box {
+        position: relative;
+        width: 320px;
+        padding: 70px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-
-        @include breakpoint($tablet) {
-            flex-direction: column;
-            align-items: center;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 50%;
+            margin: 0 -1px;
+            width: $line-h;
+            height: 30px;
+            background: $gray;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            margin: 0 -1px;
+            width: $line-h;
+            height: 30px;
+            background: $gray;
         }
     }
-    
-    &__box {
+
+    &__steering {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
-
-        width: 20%;
-        min-width: 245px;
-        padding: 20px;
-        border-radius: 5px;
-        background-color: burlywood;
-
-        &:not(:last-child) {
-            margin-right: 50px;
-
-            @include breakpoint($tablet) {
-                margin-right: 0;
-                margin-bottom: 25px;
-            }
-        }
+        align-items: left;
+        padding-left: 50px;
     }
 
     &__box-subtitle {
-        color: burlywood;
-
-        @include breakpoint($tablet) {
-            margin-bottom: 20px;
-        }
+        margin-bottom: 30px;
     }
 
     &__input-kilo {
         width: 200px;
-        height: 40px;
+        height: 50px;
         padding: 5px;
         text-align: center;
-        background: burlywood;
-        color: red;
+        background: $black;
+        color: $white;
         outline: none;
-        border: 1px solid burlywood;
-        border-radius: 5px;
+        border: $line-h solid $white;
     }
 
     &__checkbox {
@@ -122,7 +127,6 @@
     &__label {
         display: inline-flex;
         width: 100%;
-        color: burlywood;
         align-items: center;
         position: relative;
         cursor: pointer;
@@ -135,31 +139,24 @@
     &__label:before {
         content: "";
         align-self: center;
-        flex: 0 0 15px;
-        height: 15px;
-        background-color: burlywood;
-        border-radius: 5px;
-        border: 1px solid burlywood;
+        flex: 0 0 17px;
+        height: 17px;
+        background-color: $black;
+        border: 1px solid $red;
         margin-right: 10px;
     }
     
     &__label:after {
         content: "";
         position: absolute;
-        top: 0;
+        top: 3px;
         left: 0;
-        width: 15px;
-        height: 15px;
-        background: burlywood;
-        border-radius: 5px;
+        width: 17px;
+        height: 17px;
+        background: $red;
         transform: scale(0);
         transition: transform .3s ease;
     }  
-    
-    &__steering {
-        justify-content: left;
-        padding: 20px 10px;
-    }
 
     &__counter {
         display: flex;
@@ -167,87 +164,47 @@
     }
 
     &__counter-item {
-        text-align: center;
-        width: 35px;
-        height: 35px;
-        border: .5px solid burlywood;
-        font-size: 25px;
-        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
         font-weight: 700;
-        border-radius: 5px;
+        color: $red;
     }
 
     &__sign {
-        background-color: burlywood;
         cursor: pointer;
-        transition: background .2s ease;
-
-        &:hover {
-            background: burlywood;
-        }
     }
     
     &__total {
         width: 50%;
-        margin: 10px auto;
-        // @include flex-all-center;
-        flex-wrap: wrap;
-        border-top: 2px solid burlywood;
-        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
-    
     &__result {
-        font-size: 18px;
-        // @include flex-all-center;
-        padding-left: 15px;
+        font-size: $font-size-L;
+        font-weight: 700;
         color: $white;
     }
-
-    &__result-text {
-        @include breakpoint($mobile) {
-            font-size: 10px;
+    &__note {
+        width: 50%;
+        font-size: 12px;
+        text-align: left;
+        a {
+            color: $red;
+            font-weight: 700;
+            margin-left: 5px;
+            cursor: pointer;
         }
     }
-
-    
-
-    &__result span {
-        font-size: 25px;
-        margin-right: 10px;
-    }
-
-    &__note {
-        font-size: 10px;
-        text-align: center;
-        margin-top: 10px;
-        border-top: 1px solid burlywood;
-        padding-top: 15px;
-        margin-bottom: 50px;
-    }
-
-    &__footer {
-        display: flex;
-        justify-content: center;
-    }
-
-    &__phone {
-        // @include flex-all-center;
-        padding-right: 25px;
-        padding-left: 10px;
-        border: 1px solid burlywood;
-        border-radius: 5px;
-        color: burlywood;
-    }
-
-    &__button {
-        margin-left: -12px;
-    }
-
 }
 
 #moto {
     background-image: url("./images/calculator/moto.png");
-    // background-size: 120px 70px;
 }
 
 #light-car {
@@ -268,7 +225,7 @@
 
 #special {
     background-image: url("./images/calculator/minitech.png");
-    // background-size: 100px 60px;
+    background-size: 50%;
 }
 
 #van {
@@ -281,12 +238,12 @@
 
 #day {
     background-image: url("./images/calculator/day.svg");
-    // background-size: 100px 90px;
+    background-size: 50%;
 }
 
 #night {
     background-image: url("./images/calculator/night.svg");
-    // background-size: 100px 90px;
+    background-size: 50%;
 }
 
 

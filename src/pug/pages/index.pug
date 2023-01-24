@@ -203,23 +203,27 @@ block content
       img(src="images/icon/arrow_big.svg", alt="телефон эвакуатора")
       +phone("40px")
   section#calculating.calculating
-    h3.title.calculating__title рассчитать <span>стоимость ЭВАКУАТОРА</span>
+    h3.title.calculating__title рассчитать <span>стоимость</span>
     .calculating__inner
-      .calculating__subtitle <span>1</span> Выберите тип автомобиля
+      .calculating__subtitle(data-aos="fade-right" data-aos-once="once")
+        span 1 
+        | Выберите тип автомобиля
       .calculating__cars  
         ul.calculating__choose.list-reset
           li#moto.calculating__choose-item(data-tarif='1' data-fix='2000' data-price='50') Мотоцикл 
           li#light-car.calculating__choose-item.calculating__choose-item_active(data-tarif='2' data-fix='2000' data-price='50') Легковая
         ul.calculating__choose.list-reset  
           li#cross.calculating__choose-item(data-tarif='3' data-fix='2500' data-price='60') Кроссовер
-          li#jip.calculating__choose-item(data-tarif='4' data-fix='2500' data-price='60') Внедорожник
+          li#jip.calculating__choose-item(data-tarif='4' data-fix='2500' data-price='60') Джип
         ul.calculating__choose.list-reset
           li#minivan.calculating__choose-item(data-tarif='5' data-fix='2500' data-price='60') Минивэн
           li#special.calculating__choose-item(data-tarif='6' data-fix='2500' data-price='60' ) Спецтехника
         ul.calculating__choose.list-reset  
           li#van.calculating__choose-item(data-tarif='7' data-fix='2500' data-price='60') Минибус
           li#truck.calculating__choose-item(data-tarif='8' data-fix='3000' data-price='70') Грузовая
-      .calculating__subtitle Выберите дополнительные опции
+      .calculating__subtitle(data-aos="fade-right" data-aos-once="once")
+        span 2 
+        | Выберите дополнительные опции
       ul.calculating__insert.list-reset
         li.calculating__box
           .calculating__box-subtitle Расстояние (км)*
@@ -234,18 +238,22 @@ block content
         li.calculating__box
           .calculating__box-subtitle Заблокированных колёс
           .calculating__counter
-            #minus.calculating__counter-item.calculating__sign -
+            #minus.calculating__counter-item.calculating__sign
+              img(src="images/icon/minus.svg", alt="")
             #wheelnumber.calculating__counter-item 0
-            #plus.calculating__counter-item.calculating__sign +
-      .calculating__subtitle Выберите время суток
+            #plus.calculating__counter-item.calculating__sign
+              img(src="images/icon/plus.svg", alt="")
+      .calculating__subtitle(data-aos="fade-right" data-aos-once="once")
+        span 3 
+        | Выберите время суток
       #daynight.calculating__choose
-        #night.calculating__choose-item Ночь 
         #day.calculating__choose-item.calculating__choose-item_active День
+        #night.calculating__choose-item Ночь
       .calculating__total
-        .calculating__result-text.small-title
-          | Расчетная стоимость:
+        .calculating__result Стоимость эвакуатора:
         .calculating__result
-          span 200
-          |  руб.
+          span 200 
+          | руб.
       .calculating__note
-        | *Cтоимость является ориентировочной и может меняться в зависимости от фактических условий и сложности работ. Уточняйте стоимость у диспетчера по номеру +7 (812) 975-60-60
+        | *Cтоимость является ориентировочной и может меняться в зависимости от фактических условий и сложности работ. Уточняйте стоимость по телефону
+        a(href="tel:+78129756060") 975-60-60
