@@ -5,6 +5,7 @@ import btnToTop from './js/btn-to-top';
 import pageScrollAnimation from './js/pageScrollAnimation';
 import counter from './js/counter';
 import calculator from './js/calculator';
+import accordion from './js/accordion';
 import swiper from './js/swiper';
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     pageScrollAnimation();
     counter();
     calculator();
+    accordion();
     swiper();
 });
 

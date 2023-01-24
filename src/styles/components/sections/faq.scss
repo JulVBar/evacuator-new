@@ -1,0 +1,101 @@
+.faq {
+  &__title {
+    width: 50%;
+  }
+}
+
+.accordion {
+  &__list {
+      width: 100%;
+  }
+
+  &__item {
+      text-align: right;
+      cursor: pointer;
+      background: $black;
+      border-top: $line-h solid $gray;
+      border-bottom: none;
+      // padding-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &:last-child {
+        border-bottom: $line-h solid $gray;
+      }
+
+      &.open .accordion__body {
+          // display: block;
+          //animation
+          opacity: 1;
+          padding: 25px 0;
+      }
+      &.open .accordion__header:before {
+          transform: translateY(-50%) rotate(0deg);
+      }
+  }
+
+  &__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      position: relative;
+      padding: 15px 0;
+      position: relative;
+      cursor: pointer;
+      transition: color .2s linear;
+      img {
+        width: 70px;
+        height: 70px;
+        display: block;
+      }
+      &:after,
+      &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          z-index: 1;
+          width: 20px;
+          height: 2px;
+          background: $gray-light;
+      }
+      &:after {
+          transform: translateY(-50%);
+      }
+      &:before {
+          transform: translateY(-50%) rotate(90deg);
+          transition: transform .2s linear;
+      }
+  }
+  &__title {
+    width: 50%;
+    padding-right: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-M;
+    font-weight: 700;
+    color: $gray-light;
+  }
+  &__body {
+      width: 50%;
+      pointer-events: none;
+      text-align: left;
+      // display: none;
+      //animation
+      box-sizing: content-box; //для правильной работы падингов
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      will-change: max-height;
+      transition: all .2s ease-out;
+      ul {
+        padding: 20px;
+        margin: 0;
+        li:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+  }
+}

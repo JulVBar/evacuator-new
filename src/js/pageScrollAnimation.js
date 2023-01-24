@@ -22,7 +22,7 @@ function pageScrollAnimation() {
 
       if (scroll > top && scroll < bottom)  {
         // анимации линий каждого прайс элемента при скролле
-        if (id === 'pricelist' && priceItems?.length > 0) {
+        if (id === 'prices' && priceItems?.length > 0) {
           for (let i = 0; i < priceItems.length; i++) {
             priceItems[i].lastChild.style.animationDelay = i/10 + 's';
             priceItems[i].lastChild.classList.add('scroll-animation');
