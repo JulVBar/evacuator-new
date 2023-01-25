@@ -1,9 +1,9 @@
 function pageScrollAnimation() {
   const sections = document.querySelectorAll('section');
-  const priceItems = document.querySelectorAll('.pricelist__item');
-  const howtoIcons = document.querySelectorAll('.howto__icon');
 
-  // добавить линии каждому прайс элементу
+
+  // Prices section lines
+  const priceItems = document.querySelectorAll('.pricelist__item');
   if (priceItems && priceItems.length > 0) {
     priceItems.forEach(item => {
       const bottomLine = document.createElement('div');
@@ -11,6 +11,22 @@ function pageScrollAnimation() {
       item.append(bottomLine);
     })
   }
+
+  // Howto section lines
+  const howtoSteps = document.querySelectorAll('.howto__step');
+  if (howtoSteps && howtoSteps.length > 0) {
+    howtoSteps.forEach(item => {
+      const borderContainer = document.createElement('ul');
+      borderContainer.classList.add('list-reset');
+      borderContainer.classList.add('howto__step-border');
+      item.append(borderContainer);
+      for (let i = 0; i < 4; i++) {
+        const borderLine = document.createElement('li');
+        borderLine.classList.add('howto__step-border-line');
+        borderContainer.append(borderLine);
+      }
+    })
+   }
   
 
   function scrollAnimation() {
@@ -28,11 +44,10 @@ function pageScrollAnimation() {
             priceItems[i].lastChild.classList.add('scroll-animation');
           }
         }
-        // анимации иконок в howto steps
-        if (id === 'howto' && howtoIcons?.length > 0) {
-          for (let i = 0; i < howtoIcons.length; i++) {
-            howtoIcons[i].style.animationDelay = i/5 + 's';
-            howtoIcons[i].classList.add('scroll-animation');
+        // анимации бордера в howto steps
+        if (id === 'howto' && howtoSteps?.length > 0) {
+          for (let i = 0; i < howtoSteps.length; i++) {
+            howtoSteps[i].lastChild.classList.add('scroll-animation');
           }
         }
       }

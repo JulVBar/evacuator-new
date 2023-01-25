@@ -11,6 +11,16 @@
     animation: draw-line-hor $duration linear forwards;
 }
 
+@keyframes draw-line-vert {
+    to {
+        height: 100%;
+    }
+}
+
+@mixin animation-draw-line-vert  ($duration) {
+    animation: draw-line-vert  $duration linear forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

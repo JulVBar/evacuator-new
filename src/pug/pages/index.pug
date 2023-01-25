@@ -306,4 +306,27 @@ block content
               li Причина вызова
               li Время подачи
               li Когтактные данные
+  section#contacts.contacts
+    h3.title.contacts__title
+      span СКИДКА 10% 
+      | НА ПРЕДВАРИТЕЛЬНЫЙ ЗАКАЗ
+    .contacts__container
+      .contacts__image(data-aos='fade-right' data-aos-once="once")
+        img.image-cover(src="images/truck.png", alt="эвакуатор дешево в спб и ло")
+      .contacts__form
+        p.contacts__text Воспользуйтесь 
+          span формой заявки, 
+          | чтобы заказать эвакуатор или оставить сообщение. Диспетчер свяжется с Вами.
+        form.form(action='#')
+          .form__control
+            input#formName(type='text' name='name' required='' maxlength="150" placeholder="Как к Вам обращаться?")
+            label(for="formName") 
+          .form__control
+            input#formPhone(type='tel' name='phone' required='' maxlength="12" placeholder="Ваш телефон")
+            label(for="formPhone")
+          .form__control
+            textarea#formMessage(name='message' maxlength="300" placeholder='Ваше сообщение')
+          button.form__btn.red-button(type='submit') ОФОРМИТЬ ЗАЯВКУ
+          .form__agreement
+            | Нажимая кнопку "Оформить заявку", я даю своё согласие на обработку персональных данных в соответствии с законом ФЗ-152 О персональных данных.
 

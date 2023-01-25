@@ -10,8 +10,62 @@
   &__step {
     width: 49%;
     padding: 30px;
-    border: $line-h solid $gray;
+    // border: $line-h solid $gray;
     margin-bottom: 20px;
+    position: relative;
+    &-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      &-line {
+        position: absolute;
+        background: $gray;
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+          width: 70%;
+          height: $line-h;
+        }
+        &:nth-child(2) {
+          bottom: 0;
+          right: 0;
+          width: 70%;
+          height: $line-h;
+        }
+        &:nth-child(3) {
+          bottom: 0;
+          left: 0;
+          height: 70%;
+          width: $line-h;
+        }
+        &:nth-child(4) {
+          top: 0;
+          right: 0;
+          height: 70%;
+          width: $line-h;
+        }
+      }
+      &.scroll-animation {
+        li {
+          &:nth-child(1) {
+            @include animation-draw-line-hor(1s);
+          }
+          &:nth-child(2) {
+            @include animation-draw-line-hor(1s);
+          }
+          &:nth-child(3) {
+            @include animation-draw-line-vert(1s);
+          }
+          &:nth-child(4) {
+            @include animation-draw-line-vert(1s);
+          }
+        }
+      }
+    }
   }
   &__picture {
     width: 49%;
@@ -27,9 +81,6 @@
     width: 50px;
     height: 50px;
     margin-right: 25px;
-    &.scroll-animation {
-      @include animation-scale-out(0.7s);
-    }
   }
   &__caption {
     color: $white;
