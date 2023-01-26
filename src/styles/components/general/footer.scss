@@ -1,4 +1,87 @@
 .footer {
+  padding-bottom: 50px;
+  position: relative;
+  &__top-border {
+    width: 100%;
+    height: $line-h;
+    background: $gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: scaleX(0);
+    transition: all 1s ease;
+  }
+  &.scroll-animation {
+    .footer__top-border {
+      transform: scaleX(1);
+    }
+    .footer__block-border {
+      @include animation-draw-line-vert-70(1s);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: stretch;
+  }
+  &__block {
+    width: 33%;
+    padding: 0 50px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &-border {
+      width: $line-h;
+      height: 0%;
+      background: $gray;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 99;
+    }
+    &:last-child {
+      .footer__block-border {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 23px 0;
+  }
+  &__social {
+    display: flex;
+    margin: 30px 0;
+    a {
+      transition: all .2s linear;
+      margin-right: 30px;
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: $white;
+      }
+      &:hover {
+        svg {
+          fill: $red;
+        }
+      }
+    }
+  }
+  &__contact {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &-link {
+      color: $gray-light;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
   nav ul {
     flex-direction: column;
     li {
