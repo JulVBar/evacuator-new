@@ -1,30 +1,30 @@
 footer#footer.footer
-  .footer__container
-    .footer__block
-      a(href="index.html").footer__logo.logo
-        img.image-contain(src="images/logo/logo.svg", alt="эвакуатор спб logo")
-      .footer__social
-        a(href="https://api.whatsapp.com/send?phone=+79019756060" target="blank")
-          svg
-            use(xlink:href='images/icon/sprite.svg#whatsapp')
-        a(href="tel:+78129756060" target="blank")
-          svg
-            use(xlink:href='images/icon/sprite.svg#telegram')
-        a(href="https://vk.com/evacua24" target="blank")
-          svg
-            use(xlink:href='images/icon/sprite.svg#vk')
-      p Copyright © 2013 - 2023 Заказ эвакуатора в Санкт-Петербурге
-    .footer__block
-      .footer__title КОНТАКТЫ
-      ul.footer__contact.list-reset
-        li.footer__contact-item
-          a.footer__contact-link(href="tel:+78129756060" target="blank") +7 812 948-27-80
-        li.footer__contact-item
-          a.footer__contact-link(href="tel:+78129482780" target="blank") +7 812 948-27-80
-        li.footer__contact-item
-          a.footer__contact-link(href="mailto:email@yandex.ru" target="blank") email@yandex.ru
-        li.footer__contact-item
-          p.footer__contact-link 193168, Санкт-Петербург, пр-т Большевиков 79к1
-    .footer__block
-      .footer__title НАВИГАЦИЯ
-      include ../blocks/navigation
+  .container
+    .footer__container
+      .footer__block.footer__block-logo
+        a(href="index.html").footer__logo.logo
+          img.image-contain(src="images/logo/logo.svg", alt="эвакуатор спб logo")
+        .footer__social
+          a(href="https://api.whatsapp.com/send?phone=+79019756060" target="blank")
+            svg
+              use(xlink:href='images/icon/sprite.svg#whatsapp')
+          a(href="tel:+78129756060" target="blank")
+            svg
+              use(xlink:href='images/icon/sprite.svg#telegram')
+          a(href="https://vk.com/evacua24" target="blank")
+            svg
+              use(xlink:href='images/icon/sprite.svg#vk')
+      .footer__block
+        .footer__title НАВИГАЦИЯ
+        include ../blocks/navigation
+      .footer__block
+        .footer__title КОНТАКТЫ
+        ul.footer__contact.list-reset
+          li.footer__contact-item
+            a.footer__contact-link(href="tel:+78129756060") +7 812 948-27-80
+          li.footer__contact-item
+            a.footer__contact-link(href="tel:+78129482780") +7 812 948-27-80
+          li.footer__contact-item
+            a.footer__contact-link(href="mailto:admin@evacuator24spb.ru" target="blank") admin@evacuator24spb.ru
+      
+    p.footer__copyright Copyright © 2013 - 2023 Заказ эвакуатора в Санкт-Петербурге

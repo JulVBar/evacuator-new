@@ -1,7 +1,9 @@
 
 import './styles/main.scss';
 import preloader from './js/preloader';
-import btnToTop from './js/btn-to-top';
+import nav from './js/nav';
+import burger from './js/burger';
+import btnCallFixed from './js/btn-call-fixed';
 import pageScrollAnimation from './js/pageScrollAnimation';
 import counter from './js/counter';
 import calculator from './js/calculator';
@@ -10,7 +12,9 @@ import swiper from './js/swiper';
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
-    btnToTop();
+    btnCallFixed();
+    nav();
+    burger();
     pageScrollAnimation();
     counter();
     calculator();

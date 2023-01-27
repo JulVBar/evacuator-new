@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    
 }
 
 body {
@@ -12,7 +11,7 @@ body {
     font-weight: 400;
     color: $gray-light;
     font-size: $font-size-M;
-    @include breakpoint($mobile) {
+    @include breakpoint($tablet) {
         font-size: $font-size-S;
     }
 }
@@ -71,7 +70,6 @@ img {
 
 main {
     flex: 1 1 auto;
-    overflow: hidden;
     //if header fixed
     // padding-top: $header-height;
 }

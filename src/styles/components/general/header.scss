@@ -16,4 +16,10 @@
   .nav__link-home {
     display: none;
   }
+  .nav {
+    display: flex;
+    @include breakpoint($tablet) {
+      display: none;
+    }
+  }
 }

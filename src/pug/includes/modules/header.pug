@@ -1,6 +1,13 @@
 header.header(data-animation)
-  .header__container
-    a(href="index.html").header__logo.logo
-      img.image-contain(src="images/logo/logo.svg", alt="эвакуатор спб logo")
-    include ../blocks/navigation
-    +phone("26px")
+  .container
+    .header__container
+      a(href="index.html").header__logo.logo
+        img.image-contain(src="images/logo/logo.svg", alt="эвакуатор спб logo")
+      include ../blocks/navigation
+      +phone("26px")
+      .burger
+        span
+        span
+        span
+.burger__menu
+  include ../blocks/navigation
