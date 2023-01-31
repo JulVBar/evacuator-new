@@ -48,6 +48,10 @@
         width: 70px;
         height: 70px;
         display: block;
+        @include breakpoint($mini-tablet) {
+          width: 50px;
+          height: 50px;
+        }
       }
       &:after,
       &:before {
@@ -59,6 +63,10 @@
           width: 20px;
           height: 2px;
           background: $gray-light;
+          @include breakpoint($tablet) {
+            width: 10px;
+            right: 10px;
+          }
       }
       &:after {
           transform: translateY(-50%);
@@ -74,9 +82,13 @@
     text-align: left;
     display: flex;
     align-items: center;
-    font-size: $font-size-M;
     font-weight: 700;
     color: $gray-light;
+    @include breakpoint($tablet) {
+      width: 80%;
+      padding-right: 25px;
+      font-weight: 400;
+    }
   }
   &__body {
       width: 50%;
@@ -90,6 +102,9 @@
       overflow: hidden;
       will-change: max-height;
       transition: all .2s ease-out;
+      @include breakpoint($tablet) {
+        width: 100%;
+      }
       ul {
         padding: 20px;
         margin: 0;

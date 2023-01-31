@@ -1,16 +1,25 @@
 .calculating {
     &__title {
         width: 50%;
+    @include breakpoint($desktop) {
+        width: 100%;
+        text-align: center;
+        }
+    }
+    &__inner {
+        @include breakpoint($desktop) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__subtitle {
         margin-bottom: 50px;
         color: $white;
-        font-size: $font-size-M;
         font-weight: 700;
         span {
             color: $red;
-            font-size: $font-size-M;
             font-weight: 700;
         }
     }
@@ -18,10 +27,16 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 30px;
+        @include breakpoint($desktop) {
+            justify-content: center;
+        }
     }
 
     &__choose {
         display: flex;
+        @include breakpoint($mini-tablet) {
+            flex-direction: column;
+        }
     }
 
     &__choose-item {
@@ -46,6 +61,10 @@
         &:hover {
             background-position-x: -30px;
         }
+        @include breakpoint($mini-tablet) {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
     }
 
     &__choose-item_active {
@@ -61,6 +80,11 @@
         border-bottom: $line-h solid $gray;
         border-top: $line-h solid $gray;
         margin-bottom: 50px;
+        @include breakpoint($tablet) {
+            flex-direction: column;
+            border: none;
+            width: 100%;
+        }
     }
     &__box {
         position: relative;
@@ -70,6 +94,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @include breakpoint($tablet) {
+            border-bottom: $line-h solid $gray;
+            border-top: $line-h solid $gray;
+            width: 100%;
+            padding: 50px 0px;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
         &:after {
             content: "";
             position: absolute;
@@ -79,6 +112,9 @@
             width: $line-h;
             height: 30px;
             background: $gray;
+            @include breakpoint($tablet) {
+                height: 15px;;
+            }
         }
         &:before {
             content: "";
@@ -89,6 +125,9 @@
             width: $line-h;
             height: 30px;
             background: $gray;
+            @include breakpoint($tablet) {
+                height: 15px;
+            }
         }
     }
 
@@ -98,6 +137,9 @@
         justify-content: center;
         align-items: left;
         padding-left: 50px;
+        @include breakpoint($tablet) {
+            align-items: center;
+        }
     }
 
     &__box-subtitle {
@@ -130,9 +172,11 @@
         align-items: center;
         position: relative;
         cursor: pointer;
-
         &:not(:last-child) {
             margin-bottom: 10px;
+        }
+        @include breakpoint($tablet) {
+            width: 250px;
         }
     }
     
@@ -184,6 +228,9 @@
         justify-content: space-between;
         margin-top: 50px;
         margin-bottom: 20px;
+        @include breakpoint($desktop) {
+            width: 100%;
+        }
     }
     &__result {
         font-size: $font-size-L;
@@ -194,6 +241,9 @@
         width: 50%;
         font-size: 12px;
         text-align: left;
+        @include breakpoint($desktop) {
+            width: 100%;
+        }
         a {
             color: $red;
             font-weight: 700;

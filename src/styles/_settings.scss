@@ -11,7 +11,7 @@ body {
     font-weight: 400;
     color: $gray-light;
     font-size: $font-size-M;
-    @include breakpoint($tablet) {
+    @include breakpoint($desktop) {
         font-size: $font-size-S;
     }
 }
@@ -84,6 +84,12 @@ footer {
 
 section {
     margin-bottom: 150px;
+    @include breakpoint($tablet) {
+        margin-bottom: 100px;
+    }
+    @include breakpoint($mini-tablet) {
+        margin-bottom: 50px;
+    }
 }
 
 .container {

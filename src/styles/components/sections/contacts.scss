@@ -1,16 +1,35 @@
 .contacts {
   &__title {
     width: 50%;
+    @include breakpoint($desktop) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__container {
     display: flex;
+    @include breakpoint($tablet) {
+      flex-direction: column;
+    }
   }
   &__image {
     width: 50%;
     padding-right: 30px;
+    @include breakpoint($tablet) {
+      width: 100%;
+      padding-right: 0px;
+      height: 250px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint($mini-tablet) {
+      height: 150px;
+    }
   }
   &__form {
     width: 50%;
+    @include breakpoint($tablet) {
+      width: 100%;
+    }
     p span {
       color: $red;
     }
@@ -34,11 +53,13 @@
       background: $black;
       padding: 15px 0;
       padding-left: 25px;
-      font-size: $font-size-M;
       color: $gray-light;
       font-family: $font-family;
       outline: none;
-      
+      @include breakpoint($mini-tablet) {
+        width: 320px;
+      }
+    }
       &::placeholder {
         color: $gray-light;
         font-family: $font-family;
@@ -70,9 +91,11 @@
       min-width: 400px;
       max-height: 150px;
       min-height: 150px;
+      @include breakpoint($mini-tablet) {
+        max-width: 320px;
+        min-width: 320px;
+      }
     }
-  }
-
   &__btn {
     margin-bottom: 20px;
   }

@@ -8,6 +8,9 @@
   &:hover {
     color: $red;
   }
+  @include breakpoint($mini-tablet) {
+    font-size: 16px !important;
+  }
 }
 
 .red-button {
@@ -17,7 +20,6 @@
   background: $red;
   color: $white;
   text-transform: uppercase;
-  font-size: $font-size-M;
   border: 0;
   letter-spacing: 2px;
   overflow: hidden;
@@ -63,10 +65,36 @@
     color: $red;
     font-weight: 700;
   }
+  @include breakpoint($desktop) {
+    font-size: 30px;
+  }
+  @include breakpoint($mini-tablet) {
+    font-size: $font-size-L;
+    margin-bottom: 30px;
+  }
 }
 
 .logo {
   display: block;
   width: 180px;
   height: 60px;
+  @include breakpoint($mini-tablet) {
+    width: 100px;
+    height: 40px;
+    padding-top: 8px;
+  }
+}
+
+.show__up {
+  display: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: $red;
+  font-size: $font-size-M;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  @include breakpoint($mini-tablet) {
+    display: inline-block;
+  }
 }

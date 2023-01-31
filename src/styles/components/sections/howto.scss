@@ -1,18 +1,39 @@
 .howto {
   &__title {
     width: 50%;
+    @include breakpoint($desktop) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__steps {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include breakpoint($tablet) {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      //need to reboot sometime
+    }
   }
   &__step {
     width: 49%;
     padding: 30px;
-    // border: $line-h solid $gray;
     margin-bottom: 20px;
     position: relative;
+    @include breakpoint($tablet) {
+      flex: 0 0 80%;
+      margin-right: 20px;
+      scroll-snap-align: start;
+      border: $line-h solid $gray;
+    }
+    @include breakpoint($mini-tablet) {
+      flex: 0 0 90%;
+      padding: 20px;
+    }
     &-border {
       position: absolute;
       top: 0;
@@ -21,6 +42,9 @@
       bottom: 0;
       width: 100%;
       height: 100%;
+      @include breakpoint($tablet) {
+        display: none;
+      }
       &-line {
         position: absolute;
         background: $gray;
@@ -91,6 +115,9 @@
     margin-bottom: 10px;
   }
   &__list {
+    @include breakpoint($mini-tablet) {
+      padding-left: 12px;
+    }
     &-item {
       margin-bottom: 5px;
       a {

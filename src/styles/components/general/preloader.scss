@@ -1,23 +1,143 @@
-// .preloader {
-//   background: $black; 
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 1100;
+.preloader {
+  background: $black; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1100;
 
-//   opacity: 1;
-//   visibility: visible;
-//   transition: .5s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+  transition: .5s ease-in-out;
 
-//   &.done {
-//       opacity: 0;
-//       visibility: hidden;
-//       // display: none;
-//   }
+  &.done {
+      opacity: 0;
+      visibility: hidden;
+      // display: none;
+  }
 
-//   &.done body {
-//       overflow-y: visible;
-//   }
-// }
+  &.done body {
+      overflow-y: visible;
+  }
+}
+
+//loader styles
+
+$loader-car-size: 120px;
+
+.loader-car{
+  width: $loader-car-size;
+  height: $loader-car-size;
+  position: relative;
+  margin: auto;
+  
+  .loader-child {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader-car 1.2s infinite ease-in-out;
+  }
+}
+
+
+//particles
+.loader-child > span > span:nth-child(1),
+.loader-child > span > span:nth-child(2),
+.loader-child > span > span:nth-child(3),
+.loader-child > span > span:nth-child(4),
+.loader-child > span > span:nth-child(5) {
+  width: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: $red;
+  position: absolute;
+  animation: fazer1 .8s linear infinite;
+}
+
+.loader-child > span > span:nth-child(2) {
+  top: 10px;
+  animation: fazer2 .8s linear infinite;
+}
+
+.loader-child > span > span:nth-child(3) {
+  top: 20px;
+  animation: fazer3 .8s linear infinite;
+  animation-delay: -1.2s;
+}
+
+.loader-child > span > span:nth-child(4) {
+  top: 30px;
+  animation: fazer4 1.2s linear infinite;
+  animation-delay: -2s;
+}
+
+.loader-child > span > span:nth-child(5) {
+  top: 40px;
+  animation: fazer4 1.2s linear infinite;
+  animation-delay: -1.6s;
+}
+
+//keyframes car
+@keyframes loader-car {
+  0%, 100%  {margin: 0 0 0 0;}
+  50% {margin: 8px 0 0 0;}
+}
+
+@keyframes loader-car {
+  0%, 100%  {margin: 0 0 0 0;}
+  50% {margin: 8px 0 0 0;}
+}
+
+//particles
+@keyframes fazer1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer2 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -60px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer4 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -120px;
+    opacity: 0;
+  }
+}
+
+@keyframes fazer5 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -80px;
+    opacity: 0;
+  }
+}

@@ -1,13 +1,23 @@
 .reviews {
   &__title {
     width: 50%;
+    @include breakpoint($desktop) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__swiper {
     margin-bottom: 50px;
+    @include breakpoint($mini-tablet) {
+      margin-bottom: 20px;
+    }
     &-nav {
       display: flex;
       justify-content: space-between;
       width: 170px;
+      @include breakpoint($mini-tablet) {
+        margin-bottom: 30px;
+      }
     }
     &-btn {
       svg {
@@ -23,25 +33,37 @@
     height: 230px;
     border: $line-h solid $gray;
     padding: 30px;
+    @include breakpoint($mini-tablet) {
+      width: 310px;
+      padding: 10px;
+      height: 350px;
+    }
     &-header {
       display: flex;
       justify-content: space-between;
       margin-bottom: 30px;
+      @include breakpoint($mini-tablet) {
+        flex-direction: column;
+      }
     }
+    &
     &-name {
       margin-bottom: 10px;
     }
     &-date {
       text-align: right;
       margin-bottom: 10px;
-    }
-    &-text {
-      
+      @include breakpoint($mini-tablet) {
+        text-align: left;
+      }
     }
   }
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint($mini-tablet) {
+      flex-direction: column;
+    }
   }
 }
