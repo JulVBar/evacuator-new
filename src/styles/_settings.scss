@@ -96,6 +96,9 @@ section {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 1240px;
+    @include breakpoint($mini-tablet) {
+        padding: 0 10px;
+    }
 }
 
 // Preloader

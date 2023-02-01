@@ -1,15 +1,13 @@
 
 function calculate() {
-
-
-        const result = document.querySelector('.calculating__result span'),
-        calculatingCheckboxs = document.querySelectorAll('.calculating__checkbox'),
-        ditchBox = document.getElementById('ditch'),
-        steerBox = document.getElementById('steer'),
-        preoderBox = document.getElementById('preoder'),
-        minus = document.getElementById('minus'),
-        plus = document.getElementById('plus'),
-        wheelnumber = document.getElementById('wheelnumber');
+    const result = document.querySelector('.calculating__result span'),
+    calculatingCheckboxs = document.querySelectorAll('.calculating__checkbox'),
+    ditchBox = document.getElementById('ditch'),
+    steerBox = document.getElementById('steer'),
+    preoderBox = document.getElementById('preoder'),
+    minus = document.getElementById('minus'),
+    plus = document.getElementById('plus'),
+    wheelnumber = document.getElementById('wheelnumber');
 
     let tarif, km, time, fix, priceForKm,
         ditch,

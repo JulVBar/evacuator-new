@@ -1,6 +1,5 @@
 function nav() {
-    const navLinks = document.querySelectorAll('a[href^="#"'),
-        sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('a[href^="#"');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {

@@ -29,20 +29,18 @@
 
 .pricelist {
   margin-bottom: 50px;
+  transition: all 0.5s linear;
   @include breakpoint($desktop) {
     width: 100%;
   }
   @include breakpoint($mini-tablet) {
     margin-bottom: 20px;
-    // max-height: 50%;
-    // transform: scaleY(1);
+    max-height: 500px;
     overflow: hidden;
   }
-  
-  transition: all 0.5s linear;
-  // &.opened {
-  //   max-height: 100%;
-  // }
+  &.opened {
+    max-height: 100%;
+  }
   &__item {
     position: relative;
     display: flex;

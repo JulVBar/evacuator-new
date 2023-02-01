@@ -13,43 +13,37 @@ function btnCallFixed() {
         
     }
 
-
-
-
-
-    
-    let screen = window.innerWidth;
     const showPricelistBtn = document.querySelector('.show__pricelist');
     const priceList = document.getElementById('pricelist');
-    const height = priceList.clientHeight;
-    const halfHeight = 0.5 * height;
-    console.log(showPricelistBtn)
 
-    window.addEventListener('resize', () => {
-        screen = window.innerWidth;
-        showcontent();
-    })
-
-    function showcontent () {
-        if (showPricelistBtn && priceList) {
-            if (screen < 768) {
-                priceList.style.height = halfHeight + 'px';
-                showPricelistBtn.addEventListener('click', () => {
-                    if (priceList.clientHeight === height) {
-                        priceList.style.height = halfHeight + 'px';
-                    } else {
-                        priceList.style.height = height + 'px';
-                    }
-                })
+    if (showPricelistBtn && priceList) {
+        showPricelistBtn.addEventListener('click', () => {
+            priceList.classList.toggle('opened');
+            if (priceList.classList.contains('opened')) {
+                showPricelistBtn.innerHTML = "Свернуть прайслист"
             } else {
-                priceList.style.height = height + 'px';
+                showPricelistBtn.innerHTML = "Развернуть прайслист"
             }
-        }
-
-        
-        
+        })
     }
-    showcontent();
-    
+
+    const showCalculatorBtn = document.querySelector('.show__calculator');
+    const calculator = document.querySelector('.calculating__inner');
+
+    if (showPricelistBtn && calculator) {
+        showCalculatorBtn.addEventListener('click', () => {
+            calculator.classList.toggle('opened');
+            if (calculator.classList.contains('opened')) {
+                showCalculatorBtn.innerHTML = "Свернуть калькулятор"
+                
+            } else {
+                showCalculatorBtn.innerHTML = "Развернуть калькулятор"
+                window.scrollTo({
+                    top: document.querySelector('.calculating').offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        })
+    }
 }
 export default btnCallFixed;
