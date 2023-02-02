@@ -1,7 +1,7 @@
-header.header(data-animation)
+header.header(data-animation itemscope="itemscope" itemtype="https://schema.org/WPHeader")
   .container
     .header__container
-      a(href="index.html").header__logo.logo
+      a(href="index.html" itemscope="" itemtype="https://schema.org/Brand").header__logo.logo
         img.image-contain(src="images/logo/logo.svg", alt="эвакуатор спб logo")
       include ../blocks/navigation
       +phone("26px")

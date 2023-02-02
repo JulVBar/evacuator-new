@@ -14,12 +14,12 @@ block content
         img(class="image-cover" src="images/hero_evacuator1.png", alt="дешевый эвакуатор в спб и ло" data-animation)
       .hero__column
         .hero__title
-          h1 <span><span data-animation>ЭВАКУАТОР</span></span> <span><span data-animation>В СПБ И ЛО</span></span>
+          h1(itemprop="headline") <span><span data-animation>ЭВАКУАТОР</span></span> <span><span data-animation>В СПБ И ЛО</span></span>
         ul.hero__tags.list-reset(data-animation)
           li.hero__tags-item ДЕШЕВО
           li.hero__tags-item БЫСТРО
           li.hero__tags-item 24 ЧАСА
-        p.hero__text(data-animation) У нас можно заказать эвакуатор недорого в Санкт-Петербурге и Ленинградской области. Мы работаем круглосуточно.
+        p.hero__text(data-animation itemprop="description") У нас можно заказать эвакуатор недорого в Санкт-Петербурге и Ленинградской области. Мы работаем круглосуточно.
         a(href="tel:+78129756060" data-animation).red-button.hero__button ВЫЗВАТЬ ЭВАКУАТОР
     .hero__footer(data-animation)
       ul.hero__benefits.list-reset
@@ -270,44 +270,44 @@ block content
       span информация
     .faq__accordion
       ul.accordion__list.list-reset
-        li.accordion__item(data-aos='fade-up' data-aos-once="once")
+        li.accordion__item(data-aos='fade-up' data-aos-once="once" itemscope itemtype="http://schema.org/Question")
           .accordion__header
             img(src="images/icon/documents.svg", alt="")
-            .accordion__title Какие документы необходимы для эвакуации авто?
-          .accordion__body(aria-hidden='true')
+            .accordion__title(itemprop="name") Какие документы необходимы для эвакуации авто?
+          .accordion__body(aria-hidden='true' itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer")
             ul
               li Удостоверение личности
               li Свидетельство о регистрации ТС
               li Страховой полис ОСАГО
               li Доверенность (для юр.лица)
-        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='100')
+        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='100' itemscope itemtype="http://schema.org/Question")
           .accordion__header
             img(src="images/icon/time.svg", alt="")
-            .accordion__title Как долго ждать эвакуатор?
-          .accordion__body(aria-hidden='true')
+            .accordion__title(itemprop="name") Как долго ждать эвакуатор?
+          .accordion__body(aria-hidden='true' itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer")
             p Среднее время подачи 20 минут. Оно зависит от загруженности автострады, а так же от наличия свободных эвакуаторов. Точное время диспетчер сообщит после определения местоположения Вашего автомобиля.
-        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='200')
+        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='200' itemscope itemtype="http://schema.org/Question")
           .accordion__header
             img(src="images/icon/ruble.svg", alt="")
-            .accordion__title От чего зависит цена эвакуатора?
-          .accordion__body(aria-hidden='true')
+            .accordion__title(itemprop="name") От чего зависит цена эвакуатора?
+          .accordion__body(aria-hidden='true' itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer")
             ul
               li Район (город или область)
               li Время суток
               li Расстояние
               li Тип автомобиля
               li Сложность погрузки
-        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='300')
+        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='300' itemscope itemtype="http://schema.org/Question")
           .accordion__header
             img(src="images/icon/lock.svg", alt="")
-            .accordion__title Можно ли эвакуировать автомобиль с заблокированными колесами?
-          .accordion__body(aria-hidden='true')
+            .accordion__title(itemprop="name") Можно ли эвакуировать автомобиль с заблокированными колесами?
+          .accordion__body(aria-hidden='true' itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer")
             p Да, можем. Если заблокировано колесо на машине или сразу два, используется специальное оборудование. Если заблокированы задние колеса или передние, эвакуация требует снятия нагрузок с коробки передач. Чтобы не повредить корпус, тележки устанавливаются домкратом.
-        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='400')
+        li.accordion__item(data-aos='fade-up' data-aos-once="once" data-aos-delay='400' itemscope itemtype="http://schema.org/Question")
           .accordion__header
             img(src="images/icon/information.svg", alt="")
-            .accordion__title Какую информацию необходимо предоставить диспетчеру?
-          .accordion__body(aria-hidden='true')
+            .accordion__title(itemprop="name") Какую информацию необходимо предоставить диспетчеру?
+          .accordion__body(aria-hidden='true' itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer")
             ul
               li Марка и модель автомобиля
               li Точный адрес, где вы находитесь
