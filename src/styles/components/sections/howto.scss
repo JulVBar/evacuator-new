@@ -115,6 +115,8 @@
     margin-bottom: 10px;
   }
   &__list {
+    position: relative;
+    z-index: 2;
     @include breakpoint($mini-tablet) {
       padding-left: 12px;
     }
