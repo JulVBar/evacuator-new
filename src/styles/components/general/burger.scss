@@ -1,71 +1,93 @@
-
 .burger {
   display: none;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 30px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 15px;
   cursor: pointer;
-  overflow: hidden;
   @include breakpoint($tablet) {
-    display: flex;
+    display: block;
   }
-  span {
-    width: 100%;
-    height: 3px;
-    background-color: $white;
-    transition: all 0.25s;
-  }
-  &.opened {
-    span {
-      background-color: $red;
+  &__line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $gray-light;
+    pointer-events: none;
+    transition: all 0.3s linear;
+    &:first-child {
+      top: 60%;
     }
-    span {
-      &:nth-child(1) {
-        transform: translateY(12px) rotate(45deg);
-      }
-      &:nth-child(2) {
-        transform: translateX(100px);
-      }
-      &:nth-child(3) {
-        transform: translateY(-15px) rotate(-45deg);
-      }
+    &:last-child {
+      top: 30%;
+    }
+  }
+  &.open {
+    .burger__line:first-child {
+      transform: translate(-50%, -50%) rotate(45deg);
+      top: 50%;
+    }
+    .burger__line:last-child {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: 50%;
+    }
+    ~ .burger__menu {
+      top: 0;
     }
   }
 }
 
 .burger__menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
-  background: $black;
-  border-right: $line-h solid $red;
-  z-index: 99;
-  transform: translateX(-110%);
-  transition: all .5s linear;
   display: none;
+  // display: flex;
+  justify-content: center;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: $header-height;
+  background: $black;
+  transition: all 0.3s linear;
   @include breakpoint($tablet) {
-    display: block;
+    display: flex;
   }
-  &.opened {
-    transform: translateX(0);
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
+}
+
+.burger__nav {
+  padding-top: 50px;
+  ul {
+    @include list-reset;
     li {
-      padding: 30px 20px;
-      &:not(:last-child) {
-        margin-right: 0px;
-        margin-bottom: 10px;
-      }
+      display: block;
+      overflow: hidden;
       a {
-        font-weight: 700;
-        font-size: $font-size-L;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: $gray-light;
+        text-decoration: none;
+        font-size: $font-size-XL;
+        line-height: 140%;
+        transition: all 0.2s ease-in-out;
+        padding: 20px 0;
+        text-align: center;
+        &:hover {
+          color: $red;
+        }
+        &.active {
+          color: $red;
+        }
+        &.animate {
+          @include animation-slide-up-full(0.2s, 0.5s);
+        }
       }
     }
   }

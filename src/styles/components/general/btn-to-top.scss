@@ -1,0 +1,30 @@
+.btn-to-top {
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: $gray;
+    box-shadow: none;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($color: $gray, $amount: 10);
+    }
+    svg {
+        width: 15px;
+        height: 15px;
+        fill: $gray-light;
+    }
+    &.active {
+        display: flex;
+    }
+}

@@ -1,32 +1,28 @@
-.nav {
-  display: flex;
-  &__item {
-    position: relative;
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-    &:hover {
-      .nav__link:after {
-        width: 100%;
+.main-nav {
+  ul {
+    display: flex;
+    li {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 50px;
       }
-    }
-  }
-  &__link {
-    position: relative;
-    color: $gray-light;
-    &:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0%;
-      height: $line-h;
-      background-color: $red;
-      transition: all .2s ease-in-out;
-    }
-    
-    &.active {
-      // color: $red;
+      a {
+        position: relative;
+        color: $gray-light;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0%;
+          height: $line-h;
+          background-color: $red;
+          transition: all .2s ease-in-out;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+      }
     }
   }
 }

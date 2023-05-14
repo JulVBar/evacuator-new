@@ -38,10 +38,15 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
   &:hover::after {
-    animation: ripple .5s ease-in-out forwards;
+    animation: ripple-red-button .5s ease-in-out forwards;
   }
 }
-@keyframes ripple {
+
+.red-button:hover::after {
+  animation: ripple-red-button .5s ease-in-out forwards;
+}
+
+@keyframes ripple-red-button {
   0% {
     opacity: 0;
     transform: scale(1);

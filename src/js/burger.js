@@ -1,10 +1,15 @@
 function burger() {
   const burger = document.querySelector('.burger');
-  const burgerMenu = document.querySelector('.burger__menu');
-  if (burger && burgerMenu) {
+  const burgerNav = document.querySelectorAll('.burger__nav ul li a');
+  if (burger) {
     burger.addEventListener('click', () => {
-      burger.classList.toggle('opened');
-      burgerMenu.classList.toggle('opened');
+      burger.classList.toggle('open');
+      document.body.classList.toggle('no-scroll');
+      if (burgerNav) {
+        burgerNav.forEach(link => {
+          link.classList.toggle('animate');
+        })
+      }
     })
   }
 }

@@ -101,6 +101,42 @@
     animation-delay: $delay;
 }
 
+@keyframes slide-down-full {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-slide-down-full ($duration, $delay) {
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slide-down-full $duration linear forwards;
+    animation-delay: $delay;
+}
+
+@keyframes slide-up-full {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@mixin animation-slide-up-full ($duration, $delay) {
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slide-up-full $duration ease-in-out forwards;
+    animation-delay: $delay;
+}
+
 @keyframes roll-in-left {
     from {
         transform: rotate(0deg);

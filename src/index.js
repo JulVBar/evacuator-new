@@ -3,7 +3,7 @@ import './styles/main.scss';
 import preloader from './js/preloader';
 import nav from './js/nav';
 import burger from './js/burger';
-import btnCallFixed from './js/btn-call-fixed';
+import buttonsJs from './js/buttonsJs';
 import pageScrollAnimation from './js/pageScrollAnimation';
 import counter from './js/counter';
 import calculator from './js/calculator';
@@ -12,7 +12,7 @@ import swiper from './js/swiper';
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
-    btnCallFixed();
+    buttonsJs();
     nav();
     burger();
     pageScrollAnimation();

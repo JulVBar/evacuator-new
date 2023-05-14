@@ -1,16 +1,24 @@
-function btnCallFixed() {
-    const btnCallFixed = document.querySelector('.btn-call-fixed');
-    function btnCallFixedShow() {
+function buttonsJs() {
+    const btnTop = document.querySelector('.btn-to-top');
+
+    function btnToTopShow() {
         if (window.pageYOffset !== 0) {
-            btnCallFixed.classList.add('active');
+            btnTop.classList.add('active');
         } else {
-            btnCallFixed.classList.remove('active');
+            btnTop.classList.remove('active');
         }
     }
 
-    if (btnCallFixed) {
-        window.addEventListener('scroll', btnCallFixedShow);
+    if (btnTop) {
+        window.addEventListener('scroll', btnToTopShow);
         
+        btnTop?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 
     const showPricelistBtn = document.querySelector('.show__pricelist');
@@ -46,4 +54,4 @@ function btnCallFixed() {
         })
     }
 }
-export default btnCallFixed;
+export default buttonsJs;

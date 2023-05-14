@@ -64,14 +64,12 @@ img {
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
-    // width: 100vw;
     min-height: 100vh;
 }
 
 main {
     flex: 1 1 auto;
-    //if header fixed
-    // padding-top: $header-height;
+    padding-top: $header-height;
 }
 
 header {
